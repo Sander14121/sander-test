@@ -10,9 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class Controller {
 
-    @GetMapping("/")
+    @GetMapping("/start")
     public ResponseEntity<String> helloWorld() {
-        return ResponseEntity.ok("Hello");
+        return ResponseEntity.ok("Hello world");
+    }
+
+    @GetMapping("/secured")
+    public ResponseEntity<String> helloSecured() {
+        return ResponseEntity.ok("This is a secured endpoint");
     }
 
 }
